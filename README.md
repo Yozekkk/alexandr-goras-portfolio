@@ -31,4 +31,6 @@ pnpm preview
 
 ## Публикация
 
-Проект рассчитан на Vercel: `pnpm run build`, выходная папка `dist`. Файл `vercel.json` задаёт параметры сборки и защитные HTTP-заголовки.
+Код: [GitHub](https://github.com/Yozekkk/alexandr-goras-portfolio). Production: [Vercel](https://alexandr-goras-portfolio.vercel.app/).
+
+Проект использует `pnpm run build`, выходная папка `dist`. Файл `vercel.json` задаёт параметры сборки и защитные HTTP-заголовки. Production-развёртывание выполнено через API Vercel в отдельном проекте аккаунта `NCEA_stufio_site`. Автоматическая связь с GitHub пока не настроена: Vercel сообщил, что для неё требуется GitHub Login Connection в аккаунте Vercel.
