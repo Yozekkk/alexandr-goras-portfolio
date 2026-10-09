@@ -147,8 +147,8 @@ a.social-link:hover { transform: translateY(-3px); border-color: #b8935a; box-sh
   .wordmark { font-size: 22px; }
   .desktop-nav { display: none; }
   .menu-toggle { display: grid; margin-left: auto; place-items: center; width: 42px; height: 42px; border: 1px solid #ddd2bf; border-radius: 50%; background: transparent; color: #34312b; cursor: pointer; }
-  .mobile-nav { display: grid; grid-template-rows: 0fr; opacity: 0; visibility: hidden; padding-inline: 17px; transition: grid-template-rows .3s ease, opacity .3s ease, visibility .3s ease; }
-  .mobile-nav.is-open { grid-template-rows: 1fr; opacity: 1; visibility: visible; padding-bottom: 12px; }
+  .mobile-nav { display: block; max-height: 0; overflow: hidden; opacity: 0; visibility: hidden; padding-inline: 17px; transition: max-height .3s ease, opacity .3s ease, visibility .3s ease; }
+  .mobile-nav.is-open { max-height: 130px; opacity: 1; visibility: visible; padding-bottom: 12px; }
   .mobile-nav a { display: block; padding: 14px 8px; border-top: 1px solid #e8ddcc; font: 400 18px/1.2 'Noto Serif Display', Georgia, serif; }
   .hero { gap: 30px; padding: 21px 0 58px; }
   .portrait-wrap { width: min(48vw, 200px); }
@@ -186,6 +186,11 @@ a.social-link:hover { transform: translateY(-3px); border-color: #b8935a; box-sh
   .footer-inner { gap: 23px; }
   .footer-name { font-size: 24px; }
   .footer-inner nav { gap: 13px 22px; font-size: 14px; }
+}
+
+@media (max-width: 360px) {
+  .hero-copy { min-width: 0; }
+  .hero h1 { font-size: 38px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
