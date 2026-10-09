@@ -1,0 +1,19 @@
+node_modules/
+dist/
+.vercel/
+.agents/
+.codex/
+.aws/
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store
+coverage/
+playwright-report/
+test-results/
+*.tsbuildinfo
+Старая Версия Сайта.png
+Организатор мероприяттий фото.png
+Мероприятия Будапешт.png
+RussianBooks logo.png
