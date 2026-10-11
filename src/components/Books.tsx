@@ -2,6 +2,7 @@ import { projectCopy } from '../content'
 import { links } from '../links'
 import { Reveal } from './Reveal'
 import { SocialIcon, type SocialName } from './SocialIcon'
+import { BookLaurel } from './GreekDecor'
 
 const socials: { key: SocialName; label: string }[] = [
   { key: 'telegram', label: 'Telegram' },
@@ -31,8 +32,13 @@ export function Books() {
             <p className="links-note">Адреса этих страниц уточняются.</p>
           </div>
         </div>
-        <div className="books-logo-frame">
-          <img src="./images/russian-books.webp" width="960" height="850" alt="Оригинальный логотип Russian Books — «Книги объединяют»" loading="lazy" />
+        <div className="books-visual">
+          <BookLaurel />
+          <div className="books-logo-shell">
+            <div className="books-logo-frame">
+              <img src="./images/russian-books.webp" width="960" height="850" alt="Оригинальный логотип Russian Books, «Книги объединяют»" loading="lazy" />
+            </div>
+          </div>
         </div>
       </Reveal>
     </div>

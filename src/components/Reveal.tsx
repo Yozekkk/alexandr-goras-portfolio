@@ -5,7 +5,11 @@ export function Reveal({ children, className = '' }: { children: ReactNode; clas
 
   useEffect(() => {
     const element = ref.current
-    if (!element || !('IntersectionObserver' in window)) return
+    if (!element) return
+    if (!('IntersectionObserver' in window)) {
+      element.classList.add('is-visible')
+      return
+    }
     const observer = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) {
         element.classList.add('is-visible')

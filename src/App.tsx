@@ -3,6 +3,7 @@ import { Hero } from './components/Hero'
 import { Events } from './components/Events'
 import { Books } from './components/Books'
 import { Footer } from './components/Footer'
+import { MobileDock } from './components/MobileDock'
 
 export default function App() {
   return <>
@@ -14,5 +15,6 @@ export default function App() {
       <Books />
     </main>
     <Footer />
+    <MobileDock />
   </>
 }

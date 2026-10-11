@@ -1,6 +1,6 @@
-# Александр Горас — портфолио
+# Александр Горас | портфолио
 
-Адаптивный сайт Александра Гораса о проектах «Мероприятия Будапешт» и «Книги объединяют». Построен на React, TypeScript, Vite, Tailwind CSS и Lucide React. Содержит пять раскрывающихся направлений мероприятий, ссылки на сообщество, анимации с учётом `prefers-reduced-motion` и адаптивную навигацию.
+Адаптивный сайт Александра Гораса о проектах «Мероприятия Будапешт» и «Книги объединяют». Построен на React, TypeScript и Vite. Интерфейс использует Manrope Variable, бесплатные Hugeicons, авторскую SVG-графику и CSS-анимации с учётом `prefers-reduced-motion`. На мобильных экранах доступна компактная навигационная панель, а пять направлений мероприятий раскрываются как аккордеон.
 
 ## Запуск
 
@@ -27,10 +27,10 @@ pnpm preview
 
 В `public/images` лежат оптимизированные WebP-копии предоставленных портрета и двух логотипов. Исходные PNG в корне проекта не изменены и исключены из Git. Оригинальные изображения нужны только для локального архива; сайт использует WebP-копии.
 
-Шрифты Inter и Noto Serif Display включены локально в сокращённом WOFF2-формате. Условия SIL Open Font License лежат в `public/fonts/OFL.txt`.
+Manrope Variable подключён локально через `@fontsource-variable/manrope` и не зависит от внешнего CDN.
 
 ## Публикация
 
-Код: [GitHub](https://github.com/Yozekkk/alexandr-goras-portfolio). Production: [Vercel](https://alexandr-goras-portfolio.vercel.app/).
+Код: [GitHub](https://github.com/Yozekkk/alexandr-goras-portfolio). Целевой production-домен: [Vercel](https://goras-portfolio.vercel.app/).
 
-Проект использует `pnpm run build`, выходная папка `dist`. Файл `vercel.json` задаёт параметры сборки и защитные HTTP-заголовки. Production-развёртывание выполнено через API Vercel в отдельном проекте аккаунта `NCEA_stufio_site`. Автоматическая связь с GitHub пока не настроена: Vercel сообщил, что для неё требуется GitHub Login Connection в аккаунте Vercel.
+Проект использует `pnpm run build`, выходная папка `dist`. Файл `vercel.json` задаёт параметры сборки и защитные HTTP-заголовки. Перед production-развёртыванием необходимо подтвердить доступ именно к существующему проекту `goras-portfolio`, обслуживающему указанный домен; другой Vercel-проект использовать нельзя.
