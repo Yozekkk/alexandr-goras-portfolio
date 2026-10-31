@@ -58,5 +58,5 @@ Keep the Vite/React/TypeScript application and existing section boundaries. Add 
 
 ## Publication guard
 
-Push only to `Yozekkk/alexandr-goras-portfolio` on its existing default branch. Deploy only when the connected Vercel account exposes the existing project named `goras-portfolio`, its Project ID and scope are confirmed, and it owns `goras-portfolio.vercel.app`. Never substitute the separately discovered `alexandr-goras-portfolio` project.
+Historical note corrected on 2026-10-31: push only to `Yozekkk/alexandr-goras-portfolio`. The production domain `goras-portfolio.vercel.app` belongs to the existing Vercel project `alexandr-goras-portfolio` (Project ID `prj_MaJsZmw02c6ER765ZGYuVNRxLeCt`, team `yozekkk1`). Recheck the ID, team and domain before deployment. Do not create a project named after the domain.
 

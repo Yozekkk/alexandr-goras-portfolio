@@ -97,10 +97,16 @@ img, svg { display: block; max-width: 100%; }
 .event-row:hover { background: rgb(255 253 249 / 62%); }
 .community { display: flex; align-items: center; justify-content: space-between; gap: 40px; margin-top: 78px; padding: 34px 0 0; border-top: 1px solid var(--rule); }
 .community p { max-width: 27ch; margin: 0; color: var(--ink); font-size: clamp(24px, 2.8vw, 36px); font-weight: 650; letter-spacing: -.03em; line-height: 1.28; }
+.community-links { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 10px; }
 .primary-link { min-height: 56px; display: inline-flex; align-items: center; gap: 15px; padding: 6px 7px 6px 23px; border: 1px solid var(--gold-deep); border-radius: 999px; background: var(--gold-deep); color: #fff; font-size: 13px; font-weight: 710; white-space: nowrap; transition: background-color 180ms ease, transform 180ms var(--ease); }
 .primary-link:hover { background: #704717; transform: translateY(-2px); }
 .primary-link:active { transform: translateY(0); }
 .button-icon { width: 40px; height: 40px; display: grid; place-items: center; border-radius: 50%; background: rgb(255 255 255 / 14%); }
+.primary-link .button-icon svg, .secondary-link > svg:last-child, .social-link > svg:last-child { transition: transform 200ms var(--ease); }
+.primary-link:hover .button-icon svg, .secondary-link:hover > svg:last-child, .social-link:hover > svg:last-child { transform: translate(2px, -2px); }
+.secondary-link { min-height: 56px; display: inline-flex; align-items: center; gap: 12px; padding: 10px 17px; border: 1px solid var(--rule); border-radius: 999px; background: var(--surface); color: var(--gold-deep); font-size: 13px; font-weight: 700; white-space: nowrap; transition: border-color 180ms ease, background-color 180ms ease, transform 180ms var(--ease); }
+.secondary-link:hover { border-color: var(--gold); background: var(--cream); transform: translateY(-2px); }
+.secondary-link:active, .social-link:active { transform: translateY(1px); }
 
 .books-section { padding-bottom: 108px; }
 .books-layout { grid-template-columns: minmax(0, 1fr) minmax(0, .9fr); align-items: center; }
@@ -110,9 +116,10 @@ img, svg { display: block; max-width: 100%; }
 .social-area { margin-top: 44px; }
 .social-area h3 { margin: 0 0 14px; color: var(--ink-muted); font-size: 12px; font-weight: 720; letter-spacing: .08em; text-transform: uppercase; }
 .social-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; max-width: 600px; }
-.social-link { min-height: 50px; display: flex; align-items: center; justify-content: center; gap: 8px; padding: 9px; border: 1px solid var(--rule-light); background: var(--surface); color: var(--ink-soft); font-size: 13px; font-weight: 600; transition: color 180ms ease, border-color 180ms ease; }
-a.social-link:hover { border-color: var(--gold); color: var(--gold-deep); }
-.social-link.is-unavailable { color: var(--ink-muted); background: transparent; cursor: not-allowed; }
+.social-link { min-height: 54px; display: flex; align-items: center; justify-content: flex-start; gap: 10px; padding: 11px 13px; border: 1px solid var(--rule-light); background: var(--surface); color: var(--ink-soft); font-size: 14px; font-weight: 650; transition: color 180ms ease, border-color 180ms ease, background-color 180ms ease, transform 180ms var(--ease); }
+.social-link > svg:first-child, .secondary-link > svg:first-child, .primary-link > svg:first-child { flex: 0 0 20px; }
+.social-link > svg:last-child { margin-left: auto; color: var(--gold); }
+a.social-link:hover { border-color: var(--gold); background: var(--cream); color: var(--gold-deep); }
 .links-note { margin: 13px 0 0; color: var(--ink-muted); font-size: 12px; }
 
 .site-footer { border-top: 1px solid var(--rule); }
@@ -121,6 +128,11 @@ a.social-link:hover { border-color: var(--gold); color: var(--gold-deep); }
 .footer-inner nav { display: flex; flex-wrap: wrap; gap: 18px; color: var(--ink-soft); font-size: 13px; }
 .footer-inner nav a:hover { color: var(--gold-deep); }
 .mobile-dock { display: none; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .contact-entered .community-links, .contact-entered .social-grid { animation: contacts-enter 500ms var(--ease) both; }
+}
+@keyframes contacts-enter { from { opacity: .72; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
 
 /* The first visit is a drawing sequence. All content is readable before the class is applied. */
 @media (prefers-reduced-motion: no-preference) {
@@ -162,6 +174,7 @@ a.social-link:hover { border-color: var(--gold); color: var(--gold-deep); }
   .books-visual { grid-row: 1; min-height: 360px; }
   .books-logo-shell { width: min(70%, 340px); margin-top: 25px; }
   .community { flex-direction: column; align-items: flex-start; gap: 23px; }
+  .community-links { justify-content: flex-start; }
   .mobile-dock { position: fixed; z-index: 40; left: 50%; bottom: max(10px, env(safe-area-inset-bottom)); display: block; width: min(calc(100% - 24px), 370px); transform: translateX(-50%); }
   .mobile-dock-inner { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3px; padding: 5px; border: 1px solid var(--rule); border-radius: 19px; background: rgb(255 253 249 / 96%); box-shadow: 0 12px 30px rgb(54 40 21 / 16%); backdrop-filter: blur(12px); }
   .mobile-dock a { min-height: 50px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; border-radius: 13px; color: var(--ink-muted); font-size: 11px; font-weight: 680; transition: color 180ms ease, background-color 180ms ease; }
@@ -197,10 +210,14 @@ a.social-link:hover { border-color: var(--gold); color: var(--gold-deep); }
   .event-panel-content { padding: 0 40px 20px 65px; }
   .community { margin-top: 48px; }
   .community p { font-size: 25px; }
+  .community-links { width: 100%; flex-direction: column; }
+  .community-links a { width: 100%; justify-content: center; }
+  .primary-link .button-icon { margin-left: auto; }
+  .community-links .primary-link > svg:first-child { margin-right: auto; }
   .books-section { padding-bottom: 74px; }
   .books-visual { min-height: 300px; }
   .books-logo-shell { width: min(79%, 285px); }
-  .social-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .social-grid { grid-template-columns: 1fr; }
   .footer-inner { flex-direction: column; align-items: flex-start; justify-content: center; padding-block: 25px; }
   html[data-intro='play'] .hero-architecture .draw-line { animation-duration: 750ms; }
   html[data-intro='play'] .portrait-wrap { animation-delay: 350ms; animation-duration: 530ms; }
@@ -222,7 +239,7 @@ a.social-link:hover { border-color: var(--gold); color: var(--gold-deep); }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .event-panel { transition: none; }
-  .primary-link:hover, .event-row button:active { transform: none; }
+  .primary-link:hover, .secondary-link:hover, .social-link:active, .event-row button:active { transform: none; }
 }
 @media (prefers-reduced-transparency: reduce) {
   .mobile-dock-inner { background: var(--surface); backdrop-filter: none; }

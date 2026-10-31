@@ -30,7 +30,7 @@ web
 - Не использовать тёмную тему, тяжёлые WebGL/3D-сцены или ненужные зависимости.
 - Все интерактивные элементы поддерживают клавиатуру, мышь и touch; минимальная сенсорная область — 44 × 44 CSS px.
 - Анимации учитывают `prefers-reduced-motion` и не должны ухудшать производительность мобильных устройств.
-- Публикация разрешена только в существующий GitHub-репозиторий `Yozekkk/alexandr-goras-portfolio` и подтверждённый Vercel-проект `goras-portfolio` второго аккаунта.
+- Публикация разрешена только в существующий GitHub-репозиторий `Yozekkk/alexandr-goras-portfolio` и Vercel-проект `alexandr-goras-portfolio` (Project ID `prj_MaJsZmw02c6ER765ZGYuVNRxLeCt`, команда `yozekkk1`), к которому привязан домен `goras-portfolio.vercel.app`.
 
 ## Brand Commitments
 
@@ -47,7 +47,7 @@ web
 - Оригинальный логотип мероприятий: `public/images/budapest-events.webp`.
 - Оригинальный логотип книжного проекта: `public/images/russian-books.webp`.
 - Подтверждённый контент: `src/content.ts`.
-- Подтверждённые и отсутствующие ссылки: `src/links.ts`.
+- Предоставленные владельцем и отсутствующие ссылки: `src/links.ts`. Telegram мероприятий, Telegram книг и Instagram книг подтверждены владельцем; обе Facebook share-ссылки сверены с каноническими путями групп. TikTok и email книг неизвестны.
 - В репозитории нет отзывов, достижений или иных доказательств; будущая работа не должна их придумывать.
 
 ## Product Principles

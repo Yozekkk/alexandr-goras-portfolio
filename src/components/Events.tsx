@@ -8,6 +8,8 @@ import { links } from '../links'
 import { Reveal } from './Reveal'
 import { EventIcon } from './EventIcon'
 import { EventArchitecture } from './GreekDecor'
+import { SocialIcon } from './SocialIcon'
+import { useContactEntrance } from '../hooks/useContactEntrance'
 
 function EventAccordion() {
   const [openId, setOpenId] = useState<string | null>(events[0].id)
@@ -38,6 +40,7 @@ function EventAccordion() {
 }
 
 export function Events() {
+  const contactsRef = useContactEntrance<HTMLDivElement>()
   return <section className="events-section" id="projects" aria-labelledby="events-heading">
     <div className="container">
       <div className="section-line" aria-hidden="true"><span>✦</span></div>
@@ -58,10 +61,13 @@ export function Events() {
           <EventAccordion />
         </div>
       </Reveal>
-      <Reveal className="community">
+      <div className="community" ref={contactsRef}>
         <p>{projectCopy.community}.</p>
-        <a href={links.community} target="_blank" rel="noopener noreferrer" className="primary-link"><span>Присоединиться к сообществу</span><span className="button-icon" aria-hidden="true"><HugeiconsIcon icon={ArrowUpRight01Icon} size={18} strokeWidth={1.7} /></span></a>
-      </Reveal>
+        <div className="community-links">
+          <a href={links.events.telegram.href} target="_blank" rel="noopener noreferrer" className="primary-link" aria-label="Присоединиться к Telegram-сообществу мероприятий Будапешт"><SocialIcon name="telegram" /><span>Наш Telegram</span><span className="button-icon" aria-hidden="true"><HugeiconsIcon icon={ArrowUpRight01Icon} size={18} strokeWidth={1.7} /></span></a>
+          <a href={links.events.facebook.href} target="_blank" rel="noopener noreferrer" className="secondary-link" aria-label="Открыть Facebook-группу мероприятий Будапешт"><SocialIcon name="facebook" /><span>Facebook-группа</span><HugeiconsIcon icon={ArrowUpRight01Icon} size={17} strokeWidth={1.7} aria-hidden="true" /></a>
+        </div>
+      </div>
     </div>
   </section>
 }
