@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { HugeiconsIcon } from '@hugeicons/react'
-import ArrowUpRight01Icon from '@hugeicons/core-free-icons/ArrowUpRight01Icon'
 import MinusSignIcon from '@hugeicons/core-free-icons/MinusSignIcon'
 import PlusSignIcon from '@hugeicons/core-free-icons/PlusSignIcon'
 import { events, projectCopy } from '../content'
@@ -8,7 +7,7 @@ import { links } from '../links'
 import { Reveal } from './Reveal'
 import { EventIcon } from './EventIcon'
 import { EventArchitecture } from './GreekDecor'
-import { SocialIcon } from './SocialIcon'
+import { SocialLink } from './SocialLink'
 import { useContactEntrance } from '../hooks/useContactEntrance'
 
 function EventAccordion() {
@@ -64,8 +63,8 @@ export function Events() {
       <div className="community" ref={contactsRef}>
         <p>{projectCopy.community}.</p>
         <div className="community-links">
-          <a href={links.events.telegram.href} target="_blank" rel="noopener noreferrer" className="primary-link" aria-label="Присоединиться к Telegram-сообществу мероприятий Будапешт"><SocialIcon name="telegram" /><span>Наш Telegram</span><span className="button-icon" aria-hidden="true"><HugeiconsIcon icon={ArrowUpRight01Icon} size={18} strokeWidth={1.7} /></span></a>
-          <a href={links.events.facebook.href} target="_blank" rel="noopener noreferrer" className="secondary-link" aria-label="Открыть Facebook-группу мероприятий Будапешт"><SocialIcon name="facebook" /><span>Facebook-группа</span><HugeiconsIcon icon={ArrowUpRight01Icon} size={17} strokeWidth={1.7} aria-hidden="true" /></a>
+          <SocialLink link={links.events.telegram} />
+          <SocialLink link={links.events.facebook} />
         </div>
       </div>
     </div>

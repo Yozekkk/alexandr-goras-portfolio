@@ -1,14 +1,11 @@
 import { projectCopy } from '../content'
 import { links } from '../links'
 import { Reveal } from './Reveal'
-import { SocialIcon } from './SocialIcon'
 import { BookLaurel } from './GreekDecor'
-import ArrowUpRight01Icon from '@hugeicons/core-free-icons/ArrowUpRight01Icon'
-import { HugeiconsIcon } from '@hugeicons/react'
+import { SocialLink } from './SocialLink'
 import { useContactEntrance } from '../hooks/useContactEntrance'
 
 const socials = [links.books.telegram, links.books.facebook, links.books.instagram]
-const platformLabels = { telegram: 'Telegram', facebook: 'Facebook', instagram: 'Instagram' }
 
 export function Books() {
   const contactsRef = useContactEntrance<HTMLDivElement>()
@@ -22,7 +19,7 @@ export function Books() {
           <div id="contacts" className="social-area" ref={contactsRef}>
             <h3>Контакты проекта</h3>
             <div className="social-grid">
-              {socials.map(link => <a key={link.platform} className="social-link" href={link.href} target="_blank" rel="noopener noreferrer" aria-label={`Открыть ${link.label}`}><SocialIcon name={link.platform} /><span>{platformLabels[link.platform]}</span><HugeiconsIcon icon={ArrowUpRight01Icon} size={16} strokeWidth={1.6} aria-hidden="true" /></a>)}
+              {socials.map(link => <SocialLink key={link.platform} link={link} />)}
             </div>
             <p className="links-note">TikTok и email проекта пока не указаны.</p>
           </div>
