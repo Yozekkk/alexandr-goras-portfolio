@@ -45,6 +45,8 @@ Manrope Variable подключён локально через `@fontsource-var
 
 Проект использует `pnpm run build`, выходная папка `dist`. Файл `vercel.json` задаёт параметры сборки и защитные HTTP-заголовки. Подтверждённый проект Vercel: `alexandr-goras-portfolio`, Project ID `prj_MaJsZmw02c6ER765ZGYuVNRxLeCt`, команда `yozekkk1` (`team_cuj7VH9fJ7HKazyHPjs5FL7B`). Домен `goras-portfolio.vercel.app` закреплён за этим проектом. Перед каждым production-деплоем повторно сверяйте Project ID, команду и домен; не создавайте проект с названием домена.
 
+На момент обновления социальных ссылок Git-интеграция этого Vercel-проекта не была настроена. Публикация выполняется через Vercel API: файлы проверенного коммита загружаются в подтверждённый Project ID, сначала создаётся и проверяется preview, затем production deployment из тех же исходников. Откат возможен на предыдущий успешный production deployment через Vercel.
+
 ## Cinematic classical experience
 
 The first visit of each browser session plays a short CSS introduction: drawing guides, arch, portrait, name, description and project link. If JavaScript, session storage or animation is unavailable, the completed composition remains visible. `prefers-reduced-motion` bypasses the sequence. The project-specific motion rules live in [`skills/alexandr-goras-motion-direction/SKILL.md`](skills/alexandr-goras-motion-direction/SKILL.md).

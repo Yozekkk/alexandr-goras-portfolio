@@ -18,3 +18,5 @@ Facebook может требовать вход или показывать ра
 ## Проверка сборки
 
 Снимки из локального production preview: [390 px](../screenshots/social-update/390.webp), [768 px](../screenshots/social-update/768.webp), [1440 px](../screenshots/social-update/1440.webp). На всех трёх ширинах нет горизонтального переполнения; пять активных ссылок имеют `target="_blank"` и `rel="noopener noreferrer"`. Playwright открыл отдельные вкладки для обоих Telegram, обеих Facebook-групп и Instagram; консоль осталась без ошибок. Неизвестные TikTok и email остаются `null`.
+
+Vercel preview `dpl_67AQBSvAyEjXK45idaW26HSsmfdG` (`alexandr-goras-portfolio-dszkuyu2g-yozekkk1.vercel.app`) собран из тех же исходников. После устранения инлайнинга шрифта, который нарушал строгий CSP, повторная проверка preview показала 0 ошибок и 0 предупреждений в консоли. Предыдущий рабочий production deployment для возможного отката: `dpl_7JtwLyfasAcz4fmYLzwiABvGTHXo`.
