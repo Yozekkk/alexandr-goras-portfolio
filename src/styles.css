@@ -127,6 +127,12 @@ a.social-link:hover { border-color: var(--gold); background: var(--cream); color
 .footer-inner { min-height: 110px; display: flex; align-items: center; justify-content: space-between; gap: 28px; }
 .footer-inner nav { display: flex; flex-wrap: wrap; gap: 18px; color: var(--ink-soft); font-size: 13px; }
 .footer-inner nav a:hover { color: var(--gold-deep); }
+.footer-credit { display: flex; align-items: center; gap: .38em; min-height: 66px; border-top: 1px solid var(--rule-light); color: var(--ink-muted); font-size: 12px; letter-spacing: .01em; }
+.footer-credit-link { position: relative; display: inline-flex; align-items: center; min-height: 40px; color: var(--gold); font-weight: 750; transition: color 280ms ease, text-shadow 280ms ease; }
+.footer-credit-link::after { content: ''; position: absolute; right: 0; bottom: 7px; left: 0; height: 1px; background: currentColor; transform: scaleX(0); transform-origin: left; transition: transform 280ms var(--ease); }
+.footer-credit-link:hover, .footer-credit-link:focus-visible { color: var(--gold-deep); text-shadow: 0 0 9px rgb(168 120 54 / 26%); }
+.footer-credit-link:hover::after, .footer-credit-link:focus-visible::after { transform: scaleX(1); }
+.footer-credit-link:active { color: var(--ink); text-shadow: none; }
 .mobile-dock { display: none; }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -240,6 +246,7 @@ a.social-link:hover { border-color: var(--gold); background: var(--cream); color
   html { scroll-behavior: auto; }
   .event-panel { transition: none; }
   .primary-link:hover, .secondary-link:hover, .social-link:active, .event-row button:active { transform: none; }
+  .footer-credit-link, .footer-credit-link::after { transition: none; }
 }
 @media (prefers-reduced-transparency: reduce) {
   .mobile-dock-inner { background: var(--surface); backdrop-filter: none; }
