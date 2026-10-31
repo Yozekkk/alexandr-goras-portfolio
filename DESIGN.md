@@ -56,7 +56,7 @@ Motion thesis: the page assembles like a measured architectural drawing.
 
 - Touch targets are at least 44 × 44 CSS px.
 - Interactive icons use Hugeicons Stroke Rounded at a consistent 1.5 stroke width.
-- Disabled social destinations remain visible as information but cannot receive pointer or keyboard interaction.
+- Unknown social destinations remain `null` in configuration and are described in supporting copy without empty controls.
 - Focus uses a visible antique-gold outline with adequate offset.
 
 ## Responsive behavior
@@ -71,4 +71,8 @@ Motion thesis: the page assembles like a measured architectural drawing.
 
 The first viewport now uses a portrait inside an architectural arch, an asymmetric editorial grid, measured guide lines and two typographic name lines. This was chosen over a centered portrait and an archival sheet composition because it preserves the person as the focal point, makes the name immediately legible and needs no heavy graphic asset. The intro runs only on the first visit of a session, with a complete static composition as the default. Mobile shortens the timing. Project sections no longer depend on scroll-triggered visibility.
 
-The event list uses continuous architectural rules rather than five floating rounded cards. Book imagery sits in a quiet archive frame under a laurel/page ornament. Original image assets, factual copy, links and null contact states remain unchanged. Motion timing and engineering rules are recorded in `skills/alexandr-goras-motion-direction/SKILL.md`.
+The event list uses continuous architectural rules rather than five floating rounded cards. Book imagery sits in a quiet archive frame under a laurel/page ornament. Original image assets and factual copy remain unchanged. Motion timing and engineering rules are recorded in `skills/alexandr-goras-motion-direction/SKILL.md`.
+
+## Social contact treatment
+
+The events contact area uses one antique-gold Telegram action and a lighter Facebook companion. The books contact area presents only the three supplied destinations as equal-height archival link rows. Platform marks use the same Hugeicons size; the small external arrow is a secondary cue. A bounded entrance accent runs when a contact area enters view, while content is visible by default and reduced motion keeps it static. Unknown destinations remain in data as `null`, without empty buttons.
