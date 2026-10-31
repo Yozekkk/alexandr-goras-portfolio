@@ -1,18 +1,17 @@
 import { projectCopy } from '../content'
 import { links } from '../links'
 import { Reveal } from './Reveal'
-import { SocialIcon, type SocialName } from './SocialIcon'
+import { SocialIcon } from './SocialIcon'
 import { BookLaurel } from './GreekDecor'
+import ArrowUpRight01Icon from '@hugeicons/core-free-icons/ArrowUpRight01Icon'
+import { HugeiconsIcon } from '@hugeicons/react'
+import { useContactEntrance } from '../hooks/useContactEntrance'
 
-const socials: { key: SocialName; label: string }[] = [
-  { key: 'telegram', label: 'Telegram' },
-  { key: 'facebook', label: 'Facebook' },
-  { key: 'instagram', label: 'Instagram' },
-  { key: 'tiktok', label: 'TikTok' },
-  { key: 'email', label: 'Email' },
-]
+const socials = [links.books.telegram, links.books.facebook, links.books.instagram]
+const platformLabels = { telegram: 'Telegram', facebook: 'Facebook', instagram: 'Instagram' }
 
 export function Books() {
+  const contactsRef = useContactEntrance<HTMLDivElement>()
   return <section className="books-section" id="books" aria-labelledby="books-heading">
     <div className="container">
       <div className="section-line" aria-hidden="true"><span>✦</span></div>
@@ -20,16 +19,12 @@ export function Books() {
         <div className="books-content">
           <h2 id="books-heading">Книги<br />объединяют</h2>
           <p className="section-intro">{projectCopy.books}.</p>
-          <div id="contacts" className="social-area">
+          <div id="contacts" className="social-area" ref={contactsRef}>
             <h3>Контакты проекта</h3>
             <div className="social-grid">
-              {socials.map(({ key, label }) => {
-                const address = links.books[key]
-                const inner = <><SocialIcon name={key} /><span>{label}</span></>
-                return address ? <a key={key} className="social-link" href={key === 'email' ? `mailto:${address}` : address} target={key === 'email' ? undefined : '_blank'} rel={key === 'email' ? undefined : 'noopener noreferrer'}>{inner}</a> : <span key={key} className="social-link is-unavailable" aria-label={`${label}: адрес пока не подтверждён`} title="Адрес пока не подтверждён">{inner}</span>
-              })}
+              {socials.map(link => <a key={link.platform} className="social-link" href={link.href} target="_blank" rel="noopener noreferrer" aria-label={`Открыть ${link.label}`}><SocialIcon name={link.platform} /><span>{platformLabels[link.platform]}</span><HugeiconsIcon icon={ArrowUpRight01Icon} size={16} strokeWidth={1.6} aria-hidden="true" /></a>)}
             </div>
-            <p className="links-note">Адреса этих страниц уточняются.</p>
+            <p className="links-note">TikTok и email проекта пока не указаны.</p>
           </div>
         </div>
         <div className="books-visual">

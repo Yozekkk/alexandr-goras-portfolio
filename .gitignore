@@ -18,3 +18,7 @@ screenshots/redesign/
 Организатор мероприяттий фото.png
 Мероприятия Будапешт.png
 RussianBooks logo.png
+# Playwright CLI output (may contain credentials)
+.playwright-cli/
+.playwright/
+.claude/

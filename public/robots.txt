@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://goras-portfolio.vercel.app/sitemap.xml

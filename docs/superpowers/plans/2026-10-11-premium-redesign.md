@@ -16,7 +16,7 @@
 - Use Manrope throughout at weights 400–800.
 - Use only free Hugeicons packages and authored SVG decoration.
 - Maintain keyboard, touch, pointer and reduced-motion support.
-- Deploy only to the confirmed `goras-portfolio` project on the second Vercel account.
+- Historical plan correction (2026-10-31): deploy only to `alexandr-goras-portfolio`, Project ID `prj_MaJsZmw02c6ER765ZGYuVNRxLeCt`, team `yozekkk1`, after confirming it owns `goras-portfolio.vercel.app`.
 
 ---
 
@@ -80,5 +80,5 @@
 
 - [ ] Confirm `origin`, default branch and clean inclusion list; create one descriptive commit.
 - [ ] Push to `Yozekkk/alexandr-goras-portfolio`.
-- [ ] Re-query the second Vercel account for `goras-portfolio`, confirm scope, Project ID, repository binding and domain.
+- [ ] Re-query Vercel project `alexandr-goras-portfolio` (ID `prj_MaJsZmw02c6ER765ZGYuVNRxLeCt`) and confirm scope, repository binding and domain.
 - [ ] If and only if confirmed, deploy production and verify `https://goras-portfolio.vercel.app` visually and functionally; otherwise report publication blocked without touching another project.

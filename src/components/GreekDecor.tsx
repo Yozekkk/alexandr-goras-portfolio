@@ -3,11 +3,10 @@ export function HeroArchitecture() {
     <svg className="hero-architecture" viewBox="0 0 620 600" fill="none" aria-hidden="true">
       <path className="draw-line draw-line-a" d="M92 504V240c0-117 95-212 212-212h12c117 0 212 95 212 212v264" />
       <path className="draw-line draw-line-b" d="M132 504V246c0-94 76-170 170-170h16c94 0 170 76 170 170v258" />
-      <path d="M63 504h494M112 538h396" />
+      <path className="draw-line draw-line-c" d="M63 504h494M112 538h396" />
       <path d="M81 504h54M485 504h54M99 471h22V249H99M499 471h-22V249h22" />
       <path d="M88 234h44m-36-18h28m365 18h44m-36-18h28" />
-      <path className="hero-sun" d="M310 124v-24m0 82v-24m-41-17h24m34 0h24m-70-29 17 17m24 24 17 17m0-58-17 17m-24 24-17 17" />
-      <circle className="hero-sun" cx="310" cy="141" r="13" />
+      <path d="M96 263c20 0 27-19 38-19s18 19 38 19m352 0c-20 0-27-19-38-19s-18 19-38 19" />
     </svg>
   )
 }
