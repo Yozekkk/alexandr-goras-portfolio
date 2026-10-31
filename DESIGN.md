@@ -66,3 +66,9 @@ Motion thesis: the page assembles like a measured architectural drawing.
 - 1024 px and above: asymmetric paired project layouts, full header navigation and richer ornament.
 - `viewport-fit=cover`, safe-area-aware dock spacing and bottom content clearance are mandatory.
 
+
+## Cinematic classical experience (2026-10-31)
+
+The first viewport now uses a portrait inside an architectural arch, an asymmetric editorial grid, measured guide lines and two typographic name lines. This was chosen over a centered portrait and an archival sheet composition because it preserves the person as the focal point, makes the name immediately legible and needs no heavy graphic asset. The intro runs only on the first visit of a session, with a complete static composition as the default. Mobile shortens the timing. Project sections no longer depend on scroll-triggered visibility.
+
+The event list uses continuous architectural rules rather than five floating rounded cards. Book imagery sits in a quiet archive frame under a laurel/page ornament. Original image assets, factual copy, links and null contact states remain unchanged. Motion timing and engineering rules are recorded in `skills/alexandr-goras-motion-direction/SKILL.md`.

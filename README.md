@@ -34,3 +34,9 @@ Manrope Variable подключён локально через `@fontsource-var
 Код: [GitHub](https://github.com/Yozekkk/alexandr-goras-portfolio). Целевой production-домен: [Vercel](https://goras-portfolio.vercel.app/).
 
 Проект использует `pnpm run build`, выходная папка `dist`. Файл `vercel.json` задаёт параметры сборки и защитные HTTP-заголовки. Перед production-развёртыванием необходимо подтвердить доступ именно к существующему проекту `goras-portfolio`, обслуживающему указанный домен; другой Vercel-проект использовать нельзя.
+
+## Cinematic classical experience
+
+The first visit of each browser session plays a short CSS introduction: drawing guides, arch, portrait, name, description and project link. If JavaScript, session storage or animation is unavailable, the completed composition remains visible. `prefers-reduced-motion` bypasses the sequence. The project-specific motion rules live in [`skills/alexandr-goras-motion-direction/SKILL.md`](skills/alexandr-goras-motion-direction/SKILL.md).
+
+Comparative browser captures are stored in `screenshots/cinematic/`. They are evidence for the redesign branch, not production assets.
